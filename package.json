@@ -8,7 +8,8 @@
     "eslintFix": "npx eslint --fix",
     "prettier": "npx prettier --write .",
     "lint": "npm run eslint && npm run prettier",
-    "lint:fix": "npm run eslintFix && npm run prettier"
+    "lint:fix": "npm run eslintFix && npm run prettier",
+    "build": "npm install --force && vercel build"
   },
   "keywords": [],
   "author": "",
