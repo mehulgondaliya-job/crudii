@@ -9,7 +9,7 @@ const processEmailJob = async (job) => {
 
 // Function to handle notification jobs
 const processNotificationJob = async (job) => {
-  logger.info('Processing notification job:', { jobData: job.data });
+  logger.info(`Processing notification job: jobData ${job.data}`);
   // Add your custom logic for sending notifications
   // e.g., using a notification service or API
 };

@@ -32,7 +32,7 @@ const permissionStore = async (endpoints) => {
     );
     logger.info('Permissions have been seeded successfully');
   } catch (error) {
-    logger.error('Error in seeding to store permission:', error);
+    logger.error('Error in seeding to store permission:' + error);
   }
 };
 

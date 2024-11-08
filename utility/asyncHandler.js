@@ -3,9 +3,7 @@ const responseCodes = require('../utility/constant/responseCodes'); // Assuming 
 
 const asyncHandler = (fn) => (req, res, next) => {
   Promise.resolve(fn(req, res, next)).catch((err) => {
-    logger.error(err.message ?? err ?? 'Internal Server Error', {
-      stack: err.stack,
-    });
+    logger.error(err.message ?? err ?? 'Internal Server Error');
 
     // Send failure response with error message
     failureResponse({

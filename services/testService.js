@@ -6,7 +6,7 @@ const addQueue = async (data) => {
     createJob(QUEUE_NAME.EMAIL_QUEUE, JOB_NAME.SEND_EMAIL, data);
     return { success: true, message: 'success' };
   } catch (error) {
-    logger.error('Error Check Exist User:', error);
+    logger.error('Error Check Exist User:' + error);
     return { success: false, message: 'error.default', data: error.message };
   }
 };

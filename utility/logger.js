@@ -64,7 +64,6 @@
 // module.exports = logger;
 
 
-const winston = require('winston');
 const moment = require('moment-timezone');
 const config = require('../config/config');
 
@@ -74,28 +73,14 @@ const timezone = config.TimeZone || 'Asia/Kolkata'; // Set your desired timezone
 const timestampFormat = () => moment().tz(timezone).format('YYYY-MM-DD HH:mm:ss');
 
 // Create a logger instance
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(
-    winston.format.timestamp({ format: timestampFormat }),
-    winston.format.printf(({ timestamp, level, message }) => {
-      return `${timestamp} [${level}]: ${message}`;
-    })
-  ),
-  transports: [
-    new winston.transports.Console({
-      format: winston.format.combine(winston.format.colorize(), winston.format.simple()),
-    }),
-  ],
-});
-
-// Handle exceptions and rejections
-logger.exceptions.handle(new winston.transports.Console({
-  format: winston.format.combine(winston.format.colorize(), winston.format.simple())
-}));
-
-logger.rejections.handle(new winston.transports.Console({
-  format: winston.format.combine(winston.format.colorize(), winston.format.simple())
-}));
+const logger = {
+  error: (message) => {
+    console.log(message + ' ' + timestampFormat()); // Call timestampFormat to get the actual timestamp
+  },
+  info: (message) => {
+    console.log(message + ' ' + timestampFormat()); // Call timestampFormat to get the actual timestamp
+  }
+}
 
 module.exports = logger;
+

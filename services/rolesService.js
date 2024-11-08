@@ -20,7 +20,7 @@ const rolesStore = async (roles) => {
     );
     logger.info('Roles have been seeded successfully');
   } catch (error) {
-    logger.error('Error seeding roles:', error);
+    logger.error('Error seeding roles:' + error);
   }
 };
 
