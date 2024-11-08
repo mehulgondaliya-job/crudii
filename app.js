@@ -15,6 +15,7 @@ const allRouter = require('./routes/index');
 
 global.logger = require('./utility/logger');
 
+
 if (cluster.isMaster && config.PRODUCTION === 'true') {
   const numCPUs = os.cpus().length;
   logger.info(`Master process is running. Forking ${numCPUs} workers...`);
