@@ -1,5 +1,5 @@
 module.exports = {
-  TimeZone: process.env.TZ,
+  TimeZone: process.env.MTZ,
   PORT: process.env.PORT,
   PRODUCTION: process.env.PRODUCTION,
   SEED: process.env.SEED,
