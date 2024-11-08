@@ -1,0 +1,4 @@
+[
+  { "name": "admin", "weight": 1 },
+  { "name": "client", "weight": 2 }
+]

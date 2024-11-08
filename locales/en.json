@@ -1,0 +1,49 @@
+{
+  "welcome_message": "Welcome to our website!",
+  "success": {
+    "default": "Operation completed successfully."
+  },
+  "error": {
+    "default": "Operation is not completed successfully.",
+    "resolutionNotFound": "Resolution is not found.",
+    "validation": "Validation error found.",
+    "tryAgain": "try Again.",
+    "exists": "error.exists",
+    "rateLimitExceed": "Rate limit exceeded. Please try after {module}"
+  },
+  "failure": {
+    "serverError": "Something went wrong on our server."
+  },
+  "auth": {
+    "exists": "{module} already exists",
+    "verified": "{module} is verified",
+    "notFound": "User not found.",
+    "passwordWrong": "User Password is wrong.",
+    "UsernameWrong": "Username is wrong.",
+    "create": "Account created successfully.",
+    "login": "Login successfully.",
+    "notAuthorized": "Not authorized, token failed.",
+    "tokenNotFound": "Token not found.",
+    "tokenExpired": "Token has expired.",
+    "notVerified": "User not verified.",
+    "APIGenerated": "API Key Generated successfully.",
+    "created": "User is created.",
+    "apiKeyNotFound": "API key not found.",
+    "invalidApiKey": "Invalid API key.",
+    "invalidPassword": "auth.invalidPassword.",
+    "invalidOrExpiredToken": "Invalid or expired token.",
+    "passwordResetSuccess": "Password reset successfully.",
+    "resetEmailSent": "Password reset email sent.",
+    "noPermission": "User have not permission."
+  },
+  "softdelete": {
+    "deleted": "{module} deleted successfully.",
+    "notFound": "{module} not found."
+  },
+  "update": {
+    "success": "{module} update successfully."
+  },
+  "user": {
+    "samePassword": "New password must be different from the old password."
+  }
+}
